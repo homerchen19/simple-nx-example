@@ -1,0 +1,45 @@
+{
+  "root": "libs/design-system/text-field",
+  "sourceRoot": "libs/design-system/text-field/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/design-system/text-field",
+        "tsConfig": "libs/design-system/text-field/tsconfig.lib.json",
+        "project": "libs/design-system/text-field/package.json",
+        "entryFile": "libs/design-system/text-field/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/design-system/text-field/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/design-system/text-field/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/design-system/text-field"],
+      "options": {
+        "jestConfig": "libs/design-system/text-field/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

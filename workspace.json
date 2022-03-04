@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "projects": {
+    "design-system-button": "libs/design-system/button",
+    "design-system-text-field": "libs/design-system/text-field",
+    "doc": "apps/doc",
+    "doc-e2e": "apps/doc-e2e",
+    "store": "apps/store",
+    "store-e2e": "apps/store-e2e"
+  }
+}
