@@ -21,7 +21,8 @@
       "@nx-example/design-system/TextField": [
         "libs/design-system/text-field/src/index.ts"
       ],
-      "@nx-example/utils/fn": ["libs/utils/fn/src/index.ts"]
+      "@nx-example/utils/fn": ["libs/utils/fn/src/index.ts"],
+      "@nx-example/utils/hooks": ["libs/utils/hooks/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

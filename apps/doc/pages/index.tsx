@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { Button } from '@nx-example/design-system/Button';
 import { TextField } from '@nx-example/design-system/TextField';
 import { isAllLetters } from '@nx-example/utils/fn';
+import { useWindowSize } from '@nx-example/utils/hooks';
 
 export function Index() {
   const [name, setName] = useState('');
+  const { width } = useWindowSize();
 
   return (
     <>
@@ -29,6 +31,7 @@ export function Index() {
 
       <p>Input: {name}</p>
       <p>Is input all letters: {String(isAllLetters(name))}</p>
+      <p>Window width: {String(width)} pixels</p>
     </>
   );
 }

@@ -7,6 +7,7 @@
     "doc-e2e": "apps/doc-e2e",
     "store": "apps/store",
     "store-e2e": "apps/store-e2e",
-    "utils-fn": "libs/utils/fn"
+    "utils-fn": "libs/utils/fn",
+    "utils-hooks": "libs/utils/hooks"
   }
 }

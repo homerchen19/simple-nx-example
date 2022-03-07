@@ -4,9 +4,11 @@ import styles from './app.module.css';
 import { useState } from 'react';
 import { Button } from '@nx-example/design-system/Button';
 import { isAllLetters } from '@nx-example/utils/fn';
+import { useWindowSize } from '@nx-example/utils/hooks';
 
 export function App() {
   const [name, setName] = useState('');
+  const { width } = useWindowSize();
 
   return (
     <>
@@ -31,6 +33,7 @@ export function App() {
 
       <p>Input: {name}</p>
       <p>Is input all letters: {String(isAllLetters(name))}</p>
+      <p>Window width: {String(width)} pixels</p>
     </>
   );
 }
