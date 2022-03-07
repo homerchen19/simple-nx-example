@@ -6,6 +6,7 @@
     "doc": "apps/doc",
     "doc-e2e": "apps/doc-e2e",
     "store": "apps/store",
-    "store-e2e": "apps/store-e2e"
+    "store-e2e": "apps/store-e2e",
+    "utils-fn": "libs/utils/fn"
   }
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@nx-example/design-system/Button';
 import { TextField } from '@nx-example/design-system/TextField';
+import { isAllLetters } from '@nx-example/utils/fn';
 
 export function Index() {
   const [name, setName] = useState('');
@@ -26,7 +27,8 @@ export function Index() {
         </div>
       </form>
 
-      <p>Output: {name}</p>
+      <p>Input: {name}</p>
+      <p>Is input all letters: {String(isAllLetters(name))}</p>
     </>
   );
 }

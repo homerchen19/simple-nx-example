@@ -3,6 +3,7 @@ import styles from './app.module.css';
 
 import { useState } from 'react';
 import { Button } from '@nx-example/design-system/Button';
+import { isAllLetters } from '@nx-example/utils/fn';
 
 export function App() {
   const [name, setName] = useState('');
@@ -28,7 +29,8 @@ export function App() {
         </div>
       </form>
 
-      <p>Output: {name}</p>
+      <p>Input: {name}</p>
+      <p>Is input all letters: {String(isAllLetters(name))}</p>
     </>
   );
 }

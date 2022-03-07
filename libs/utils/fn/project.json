@@ -1,0 +1,23 @@
+{
+  "root": "libs/utils/fn",
+  "sourceRoot": "libs/utils/fn/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/utils/fn/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/utils/fn"],
+      "options": {
+        "jestConfig": "libs/utils/fn/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
