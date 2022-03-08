@@ -49,6 +49,13 @@
       "options": {
         "lintFilePatterns": ["apps/doc/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "sh apps/doc/deploy.sh"
+      }
     }
   },
   "tags": []

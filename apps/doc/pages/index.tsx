@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import getConfig from 'next/config';
 import { Button } from '@nx-example/design-system/Button';
 import { TextField } from '@nx-example/design-system/TextField';
 import { isAllLetters } from '@nx-example/utils/fn';
 import { useWindowSize } from '@nx-example/utils/hooks';
+
+const { publicRuntimeConfig } = getConfig();
 
 export function Index() {
   const [name, setName] = useState('');
@@ -32,8 +35,15 @@ export function Index() {
       <p>Input: {name}</p>
       <p>Is input all letters: {String(isAllLetters(name))}</p>
       <p>Window width: {String(width)} pixels</p>
+      <p>Runtime config: {JSON.stringify(publicRuntimeConfig)}</p>
     </>
   );
 }
 
 export default Index;
+
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}

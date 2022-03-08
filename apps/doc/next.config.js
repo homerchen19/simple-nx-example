@@ -10,6 +10,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  publicRuntimeConfig: {
+    mySecret: process.env.MY_SECRET || 'default secret',
+  },
 };
 
 module.exports = withNx(nextConfig);
